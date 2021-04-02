@@ -8,7 +8,7 @@ class Map {
    * 添加控件
    * @param control
    */
-  addControl (control) {
+  addControl(control) {
     if (this.map && control instanceof ol.control.Control) {
       this.map.addControl(control);
     } else {
@@ -20,7 +20,7 @@ class Map {
    * 添加交互
    * @param interaction
    */
-  addInteraction (interaction) {
+  addInteraction(interaction) {
     if (this.map && interaction instanceof ol.interaction.Interaction) {
       this.map.addInteraction(interaction);
     } else {
@@ -32,7 +32,7 @@ class Map {
    * 添加图层
    * @param layer
    */
-  addLayer (layer) {
+  addLayer(layer) {
     this.map.addLayer(layer);
   }
 
@@ -40,7 +40,7 @@ class Map {
    * 移除图层
    * @param layer
    */
-  removeLayer (layer) {
+  removeLayer(layer) {
     this._removeSelectFeature(null, true);
     this.map.removeLayer(layer);
   }
@@ -49,7 +49,7 @@ class Map {
    * 添加overlay
    * @param overlay
    */
-  addOverlay (overlay) {
+  addOverlay(overlay) {
     this.map.addOverlay(overlay);
   }
 
@@ -57,14 +57,14 @@ class Map {
    * 移除overlay
    * @param overlay
    */
-  removeOverlay (overlay) {
+  removeOverlay(overlay) {
     this.map.removeOverlay(overlay);
   }
 
   /**
    * 增加修订计数器并调用change事件
    */
-  changed () {
+  changed() {
     this.map.changed();
   }
 
@@ -73,7 +73,7 @@ class Map {
    * @param event
    * @returns {boolean|undefined}
    */
-  dispatchEvent (event) {
+  dispatchEvent(event) {
     return this.map.dispatchEvent(event);
   }
 
@@ -84,7 +84,7 @@ class Map {
    * @param options
    * @returns {T|undefined}
    */
-  forEachFeatureAtPixel (pixel, callback, options) {
+  forEachFeatureAtPixel(pixel, callback, options) {
     return this.map.forEachFeatureAtPixel(pixel, callback, options);
   }
 
@@ -97,7 +97,7 @@ class Map {
    * @param optThis2
    * @returns {T|undefined}
    */
-  forEachLayerAtPixel (pixel, callback, optThis, optLayerFilter, optThis2) {
+  forEachLayerAtPixel(pixel, callback, optThis, optLayerFilter, optThis2) {
     return this.map.forEachLayerAtPixel(
       pixel,
       callback,
@@ -111,7 +111,7 @@ class Map {
    * 获取set的属性值
    * @param key
    */
-  get (key) {
+  get(key) {
     return this.map.get(key);
   }
 
@@ -119,7 +119,7 @@ class Map {
    * 获取使用的控件
    * @returns {ol.Collection.<ol.control.Control>}
    */
-  getControls () {
+  getControls() {
     return this.map.getControls();
   }
 
@@ -127,7 +127,7 @@ class Map {
    * 获取开启的所有交互
    * @returns {ol.Collection.<ol.interaction.Interaction>}
    */
-  getInteractions () {
+  getInteractions() {
     return this.map.getInteractions();
   }
 
@@ -136,7 +136,7 @@ class Map {
    * @param pixel
    * @returns {ol.Coordinate}
    */
-  getCoordinateFromPixel (pixel) {
+  getCoordinateFromPixel(pixel) {
     return this.map.getCoordinateFromPixel(pixel);
   }
 
@@ -145,7 +145,7 @@ class Map {
    * @param coordinate
    * @returns {ol.Pixel}
    */
-  getPixelFromCoordinate (coordinate) {
+  getPixelFromCoordinate(coordinate) {
     return this.map.getPixelFromCoordinate(coordinate);
   }
 
@@ -154,7 +154,7 @@ class Map {
    * @param event
    * @returns {ol.Coordinate}
    */
-  getEventCoordinate (event) {
+  getEventCoordinate(event) {
     return this.map.getEventCoordinate(event);
   }
 
@@ -163,7 +163,7 @@ class Map {
    * @param event
    * @returns {ol.Pixel}
    */
-  getEventPixel (event) {
+  getEventPixel(event) {
     return this.map.getEventPixel(event);
   }
 
@@ -173,7 +173,7 @@ class Map {
    * @param options
    * @returns {Array.<ol.Feature|ol.render.Feature>}
    */
-  getFeaturesAtPixel (pixel, options) {
+  getFeaturesAtPixel(pixel, options) {
     return this.map.getFeaturesAtPixel(pixel, options);
   }
 
@@ -181,7 +181,7 @@ class Map {
    * 获取图层组
    * @returns {ol.layer.Group}
    */
-  getLayerGroup () {
+  getLayerGroup() {
     return this.map.getLayerGroup();
   }
 
@@ -189,7 +189,7 @@ class Map {
    * 获取地图上所有图层
    * @returns {!ol.Collection.<ol.layer.Base>}
    */
-  getLayers () {
+  getLayers() {
     return this.map.getLayers();
   }
 
@@ -198,7 +198,7 @@ class Map {
    * @param id
    * @returns {ol.Overlay}
    */
-  getOverlayById (id) {
+  getOverlayById(id) {
     return this.map.getOverlayById(id);
   }
 
@@ -206,7 +206,7 @@ class Map {
    * 获取地图上所有的overlay
    * @returns {ol.Collection.<ol.Overlay>}
    */
-  getOverlays () {
+  getOverlays() {
     return this.map.getOverlays();
   }
 
@@ -214,7 +214,7 @@ class Map {
    * 获取属性
    * @returns {Object.<string, *>}
    */
-  getProperties () {
+  getProperties() {
     return this.map.getProperties();
   }
 
@@ -222,7 +222,7 @@ class Map {
    * 获取修订计数器
    * @returns {number}
    */
-  getRevision () {
+  getRevision() {
     return this.map.getRevision();
   }
 
@@ -230,7 +230,7 @@ class Map {
    * 获取地图尺寸
    * @returns {ol.Size|undefined}
    */
-  getSize () {
+  getSize() {
     return this.map.getSize();
   }
 
@@ -238,7 +238,7 @@ class Map {
    * 获取初始化地图的要素对象
    * @returns {Element|string|undefined}
    */
-  getTarget () {
+  getTarget() {
     return this.map.getTarget();
   }
 
@@ -246,7 +246,7 @@ class Map {
    * 获取目标对象
    * @returns {Element}
    */
-  getTargetElement () {
+  getTargetElement() {
     return this.map.getTargetElement();
   }
 
@@ -254,7 +254,7 @@ class Map {
    * 获取对象属性名称列表。
    * @returns {Array.<string>}
    */
-  getKeys () {
+  getKeys() {
     return this.map.getKeys();
   }
 
@@ -262,7 +262,7 @@ class Map {
    * 获取视图对象
    * @returns {ol.View}
    */
-  getView () {
+  getView() {
     return this.map.getView();
   }
 
@@ -270,7 +270,7 @@ class Map {
    * 获取用作地图视口的元素
    * @returns {Element}
    */
-  getViewport () {
+  getViewport() {
     return this.map.getViewport();
   }
 
@@ -280,7 +280,7 @@ class Map {
    * @param options
    * @returns {boolean}
    */
-  hasFeatureAtPixel (pixel, options) {
+  hasFeatureAtPixel(pixel, options) {
     return this.map.hasFeatureAtPixel(pixel, options);
   }
 
@@ -289,7 +289,7 @@ class Map {
    * @param control
    * @returns {ol.control.Control|undefined}
    */
-  removeControl (control) {
+  removeControl(control) {
     return this.map.removeControl(control);
   }
 
@@ -298,14 +298,14 @@ class Map {
    * @param interaction
    * @returns {ol.interaction.Interaction|undefined}
    */
-  removeInteraction (interaction) {
+  removeInteraction(interaction) {
     return this.map.removeInteraction(interaction);
   }
 
   /**
    * 手动调用渲染器
    */
-  render () {
+  render() {
     this.map.render();
   }
 
@@ -315,7 +315,7 @@ class Map {
    * @param value
    * @param silent
    */
-  renderSync (key, value, silent) {
+  renderSync(key, value, silent) {
     this.map.renderSync(key, value, silent);
   }
 
@@ -323,7 +323,7 @@ class Map {
    * 设置图层组
    * @param layerGroup
    */
-  setLayerGroup (layerGroup) {
+  setLayerGroup(layerGroup) {
     this.map.setLayerGroup(layerGroup);
   }
 
@@ -332,7 +332,7 @@ class Map {
    * @param values
    * @param silent <更新而不触发事件>
    */
-  setProperties (values, silent) {
+  setProperties(values, silent) {
     this.map.setProperties(values, silent);
   }
 
@@ -340,7 +340,7 @@ class Map {
    * 设置地图大小
    * @param size
    */
-  setSize (size) {
+  setSize(size) {
     this.map.setSize(size);
   }
 
@@ -348,7 +348,7 @@ class Map {
    * 设置地图所在目标元素
    * @param target
    */
-  setTarget (target) {
+  setTarget(target) {
     this.map.setTarget(target);
   }
 
@@ -356,7 +356,7 @@ class Map {
    * 获取当前地图
    * @returns {ol.Map|*}
    */
-  getMap () {
+  getMap() {
     return this.map;
   }
 
@@ -364,7 +364,7 @@ class Map {
    * 设置地图实例
    * @param map
    */
-  setMap (map) {
+  setMap(map) {
     if (map && map instanceof ol.Map) {
       this.map = map;
     }
@@ -374,7 +374,7 @@ class Map {
    * 重新设置视图
    * @param view
    */
-  setView (view) {
+  setView(view) {
     if (this.map && view instanceof ol.View) {
       this.map.setView(view);
     } else {
@@ -387,7 +387,7 @@ class Map {
    * @param key
    * @param silent
    */
-  unset (key, silent) {
+  unset(key, silent) {
     this.map.unset(key, silent);
   }
 
@@ -395,13 +395,17 @@ class Map {
    * 更新地图大小
    * @returns {ol.Map|*|null|_openlayers2.Map.default}
    */
-  updateSize () {
+  updateSize() {
     if (this.map) {
       this.map.updateSize();
       return this.map;
     } else {
       throw new Error('未实例化地图对象！');
     }
+  }
+
+  printMapInfo() {
+    console.log('this map is created by dcmap');
   }
 }
 
